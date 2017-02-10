@@ -18,14 +18,14 @@ func RunHost(ip string){
 	l, err := net.Listen("tcp", ipAndPort)
 
 	if err != nil{
-		log.Fatal("Error: ", err)
+		log.Fatal("Error listen port: ", err)
 	}
 
 	fmt.Println("Listening on", ipAndPort)
 	conn, err := l.Accept()
 
 	if err != nil{
-		log.Fatal("Error: ", err)
+		log.Fatal("Error accepting connection: ", err)
 	}
 
 	fmt.Println("New connection accepted")
